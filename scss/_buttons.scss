@@ -1,0 +1,24 @@
+.btn {
+    display: inline-block;
+    width: 211px;
+    line-height: 47px;
+    color: $emphasized-color-text;
+    text-transform: capitalize;
+    text-decoration: none;
+    text-align: center;
+    border: 1px solid $emphasized-color-text;
+    transition: all 200ms;
+    &--main:hover {
+        color: white;
+        background: $emphasized-color-text;
+    }
+    &--cart {
+        border: 1px solid white;
+        color: white;
+        display: flex;
+        justify-content: center;
+        img {
+            margin-right: 10px;
+        }
+    }
+}

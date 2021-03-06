@@ -1,0 +1,21 @@
+.feature {
+    background: $dark-bg;
+    min-height: 341px;
+    &__wrap {
+        display: flex;
+        height: 100%;
+        justify-content: space-between;
+        align-items: center;
+        gap: 30px;
+    }
+    &__media {
+        text-align: center;
+        color: white;
+        h2 {
+            line-height: 23px;
+            margin: 20px 0;
+            font-weight: 400;
+        }
+        p {font-weight: 300;}
+    }
+}
