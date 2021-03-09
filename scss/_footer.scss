@@ -10,14 +10,13 @@ footer {
             display: flex;
             gap: 8px;
             a {
-                display: block;
+                display: flex;
+                align-items: center;
+                justify-content: center;
                 width: 32px;
                 height: 32px;
                 background: white;
                 transition: all 200ms;
-                svg {
-                    padding: 8px 0 0 8px;
-                }
                 &:hover {
                     background: $emphasized-color-text;
                     svg {path {fill: white;}}
