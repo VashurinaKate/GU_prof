@@ -1,0 +1,14 @@
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 75px;
+    background: $menu-bg;
+    &__search {
+        margin-left: 41px;
+    }
+    &__icons:not(:last-child) {
+        margin-right: 33px;
+    }
+    .burger {cursor: pointer;}
+}

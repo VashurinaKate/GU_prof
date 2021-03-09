@@ -1,0 +1,30 @@
+@media screen and (max-width: 1160px) {
+    .header,
+    .footer {padding: 0 32px;}
+    .sale,
+    .products {padding: 0 16px;}
+    .products {
+        &__items {
+            grid-template-columns: 1fr 1fr;
+            justify-items: center;
+            grid-gap: 16px;
+        }
+    }
+    .feature {
+        &__wrap {
+            flex-direction: column;
+            padding: 50px 0 64px 0;
+        }
+        &__media {max-width: 360px;}
+    }
+    .subscribe {
+        flex-direction: column;
+        &__info {margin: 64px 0 48px 0;}
+        &__form {margin-bottom: 64px;}
+    }
+}
+@media screen and (max-width: 768px) {
+    .sale {
+        &__item {height: 170px;}
+    }
+}
