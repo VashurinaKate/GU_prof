@@ -6,7 +6,10 @@
 
     &__img {
         width: 50%;
-        img {width: 100%;}
+    }
+    &__photo {
+        width: 100%;
+        display: flex;
     }
     &__h1 {@include font-stack-h1;}
     &__h2 {

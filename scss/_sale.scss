@@ -7,7 +7,7 @@
     }
     &__item {
         @include bg-sale;
-        max-width: 360px;
+        width: 360px;
         height: 260px;
         flex-grow: 1;
         display: flex;
