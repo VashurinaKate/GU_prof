@@ -11,6 +11,7 @@
     text-align: center;
     border: 1px solid $emphasized-color-text;
     transition: all 200ms;
+    cursor: pointer;
     svg {margin-right: 20px;}
     &--main {
         svg {
@@ -27,5 +28,14 @@
         color: white;
         display: flex;
         justify-content: center;
+    }
+    &--simple {
+        border: 1px solid $light-text-color;
+        color: $menu-bg;
+        &:hover {
+            border: 1px solid $emphasized-color-text;
+            color: white;
+            background: $emphasized-color-text;
+        }
     }
 }
