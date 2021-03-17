@@ -55,11 +55,31 @@
         &:hover .btn {
             display: flex;
             align-items: center;
-            svg {padding-right: 10px;}
         }
     }
     &__bottom {
         text-align: center;
         margin-top: 50px;
+        .pagination {
+            display: flex;
+            align-items: center;
+            width: max-content;
+            gap: 13px;
+            height: 44px;
+            border: 1px solid rgba(235, 235, 235, 1);
+            padding: 0 13px;
+            margin: 0 auto;
+            color: rgba(235, 235, 235, 1);
+            &__link {
+                text-decoration: none;
+                color: rgba(235, 235, 235, 1);
+                &-active {
+                    color: $emphasized-color-text;
+                }
+                &:hover {
+                    color: $emphasized-color-text;
+                }
+            }
+        }
     }
 }
