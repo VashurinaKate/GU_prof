@@ -5,8 +5,8 @@ $menu-bg: #222222;
 $main-bg: #E5E5E5;
 $product-body-bg: #F8F8F8;
 $light-text-color: #9F9F9F;
-$dark-bg: #222224;
 $overlay: rgba(58, 56, 56, 0.86);
+$shadow: 6px 4px 35px 0px rgba($color: #000000, $alpha: 0.21);
 @mixin font-stack-h1 {
     font-size: 31px;
     text-transform: uppercase;
@@ -16,6 +16,18 @@ $overlay: rgba(58, 56, 56, 0.86);
     font-size: 30px;
     font-weight: 400;
     text-transform: uppercase;
+}
+@mixin font-stack-a {
+    font-size: 24px;
+    font-weight: 400;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: $menu-bg;
+}
+@mixin price {
+    color: #F16D7F;
+    font-size: 16px;
+    line-height: 19px;
 }
 @mixin font-stack-h3  {
     font-size: 24px;
@@ -56,4 +68,5 @@ $overlay: rgba(58, 56, 56, 0.86);
 @import '_breadcrumb';
 @import '_filter';
 @import '_product_slider';
+@import '_cart';
 @import '_media_queries';

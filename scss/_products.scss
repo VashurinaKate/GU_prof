@@ -30,9 +30,7 @@
             @include p-product;
         }
         &-price {
-            color: $emphasized-color-text;
-            font-size: 16px;
-            line-height: 19px;
+            @include price;
             margin: 20px 0;
         }
         .btn {
