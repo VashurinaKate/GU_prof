@@ -17,4 +17,11 @@
         }
         p {font-weight: 300;}
     }
+    &__icon img {
+        transition: all 0.6s;
+        transition-timing-function:  cubic-bezier(.59,.29,.83,.44);
+    }
+    &__icon img:hover {
+        transform: rotate(360deg);
+    }
 }

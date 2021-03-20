@@ -21,6 +21,10 @@
         &-img {
             width: 100%;
             // a {display: flex;}
+            transition: all 0.3s;
+            &:hover {
+                transform: scale(1.01);
+            }
         }
         &-content {padding: 0 18px;}
         &-name {
