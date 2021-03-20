@@ -33,6 +33,7 @@ hr {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  gap: 20px;
   margin: 0 auto;
   width: 211px;
   line-height: 47px;
@@ -44,9 +45,6 @@ hr {
   -webkit-transition: all 200ms;
   transition: all 200ms;
   cursor: pointer;
-}
-.btn svg {
-  margin-right: 20px;
 }
 .btn--main svg path {
   fill: #F16D7F;
@@ -616,19 +614,25 @@ summary {
   top: 25px;
   left: -25px;
 }
-.sort__item .size-form .checkbox,
-.sort__item .size-form .radio {
+.sort ::-webkit-details-marker {
+  display: none;
+}
+
+.checkbox,
+.radio {
   margin-right: 9px;
   position: absolute;
   z-index: -1;
   opacity: 0;
 }
-.sort__item .size-form label {
+
+label {
   color: #9F9F9F;
   font-size: 14px;
 }
-.sort__item .size-form .checkbox + label,
-.sort__item .size-form .radio + label {
+
+.checkbox + label,
+.radio + label {
   display: -webkit-inline-box;
   display: -ms-inline-flexbox;
   display: inline-flex;
@@ -640,8 +644,9 @@ summary {
       -ms-user-select: none;
           user-select: none;
 }
-.sort__item .size-form .checkbox + label::before,
-.sort__item .size-form .radio + label::before {
+
+.checkbox + label::before,
+.radio + label::before {
   content: "";
   display: inline-block;
   width: 13px;
@@ -657,18 +662,17 @@ summary {
   background-position: center center;
   background-size: 50% 50%;
 }
-.sort__item .size-form .radio + label::before {
+
+.radio + label::before {
   border-radius: 50%;
   background-size: 56% 56%;
 }
-.sort__item .size-form .checkbox:checked + label::before,
-.sort__item .size-form .radio:checked + label::before {
+
+.checkbox:checked + label::before,
+.radio:checked + label::before {
   border-color: #F16D7F;
   background-color: #F16D7F;
   background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 8 8'%3e%3cpath fill='%23fff' d='M6.564.75l-3.59 3.612-1.538-1.55L0 4.26 2.974 7.25 8 2.193z'/%3e%3c/svg%3e");
-}
-.sort ::-webkit-details-marker {
-  display: none;
 }
 
 .product__slider {
@@ -826,6 +830,12 @@ summary {
   text-align: center;
   font-size: 18px;
   color: #575757;
+  position: relative;
+}
+.cart__text .quantity input[type=number]::-webkit-inner-spin-button,
+.cart__text .quantity input[type=number]::-webkit-outer-spin-button {
+  position: absolute;
+  right: 0;
 }
 .cart__heading {
   margin-bottom: 42px;
@@ -997,6 +1007,70 @@ summary {
     text-transform: none;
   }
 }
+.registration {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 128px;
+  margin: 64px 0 96px 0;
+}
+.registration__input {
+  display: block;
+  width: 360px;
+  height: 45px;
+  border: 1px solid #9F9F9F;
+  padding-left: 18px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin-bottom: 20px;
+  font-size: 11px;
+  color: #9F9F9F;
+}
+.registration button {
+  background: none;
+  margin: 39px 0 0 0;
+}
+.registration__form label[for=name],
+.registration__form label[for=email] {
+  font-size: 16px;
+  font-weight: 300;
+  margin-bottom: 20px;
+  display: block;
+  color: #222222;
+}
+.registration__form label[for=male] {
+  margin-right: 20px;
+}
+.registration__form label[for=email] {
+  margin-top: 33px;
+}
+.registration__helptext {
+  color: #9F9F9F;
+  font-size: 14px;
+  line-height: 17px;
+  font-weight: 300;
+  max-width: 360px;
+}
+.registration__heading, .registration__text, .registration__list {
+  font-size: 24px;
+  font-weight: 400;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: #222222;
+  font-weight: 300;
+  text-transform: none;
+}
+.registration__text {
+  margin-top: 20px;
+}
+.registration__list {
+  list-style-image: url(../img/listMarker.svg);
+  margin-left: 27px;
+}
+.registration__list li {
+  padding: 16px 0 0 20px;
+}
+
 @media screen and (max-width: 1160px) {
   .header,
 .footer,
@@ -1004,9 +1078,18 @@ summary {
     padding: 0 32px;
   }
 
-  .sale {
+  .sale,
+.cart,
+.registration {
     padding-left: 16px;
     padding-right: 16px;
+  }
+
+  .registration {
+    gap: 22px;
+  }
+  .registration__text, .registration__list, .registration__heading {
+    font-size: 16px;
   }
 
   .products {
@@ -1064,6 +1147,28 @@ summary {
 
   .products__items {
     grid-template-columns: 360px;
+  }
+
+  .registration {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .registration__left, .registration__right {
+    margin: 0 auto;
+  }
+  .registration__right {
+    margin-top: 25px;
+  }
+  .registration__text {
+    max-width: 360px;
+  }
+  .registration__list li {
+    max-width: 333px;
+  }
+  .registration__input {
+    width: 92vw;
   }
 }
 @media screen and (max-width: 375px) {

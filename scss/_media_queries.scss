@@ -2,9 +2,17 @@
     .header,
     .footer,
     .breadcrumb {padding: 0 32px;}
-    .sale {
+    .sale,
+    .cart,
+    .registration {
         padding-left: 16px;
         padding-right: 16px;
+    }
+    .registration {
+        gap: 22px;
+        &__text,
+        &__list,
+        &__heading {font-size: 16px;}
     }
     .products {
         padding: 0 16px;
@@ -45,6 +53,17 @@
         &__items {
             grid-template-columns: 360px;
         }
+    }
+    .registration {
+        flex-direction: column;
+        &__left,
+        &__right {margin: 0 auto;}
+        &__right {margin-top: 25px;}
+        &__text {max-width: 360px;}
+        &__list li {
+            max-width: 333px;
+        }
+        &__input {width: 92vw;}
     }
 }
 @media screen and (max-width: 375px) {

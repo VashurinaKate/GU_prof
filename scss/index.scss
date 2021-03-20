@@ -55,7 +55,17 @@ $shadow: 6px 4px 35px 0px rgba($color: #000000, $alpha: 0.21);
     line-height: 17px;
     font-weight: 300;
 }
-
+@mixin inputs {
+    display: block;
+    width: 360px;
+    height: 45px;
+    border: 1px solid $light-text-color;
+    padding-left: 18px;
+    box-sizing: border-box;
+    margin-bottom: 20px;
+    font-size: 11px;
+    color: $light-text-color;
+}
 @import '_basic';
 @import '_buttons';
 @import '_header';
@@ -69,4 +79,5 @@ $shadow: 6px 4px 35px 0px rgba($color: #000000, $alpha: 0.21);
 @import '_filter';
 @import '_product_slider';
 @import '_cart';
+@import '_registration';
 @import '_media_queries';

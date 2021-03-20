@@ -37,6 +37,15 @@
                 text-align: center;
                 font-size: 18px;
                 color: #575757;
+                position: relative;
+            }
+            input[type=number]::-webkit-inner-spin-button,
+            input[type=number]::-webkit-outer-spin-button {
+                // -webkit-appearance: none;
+                // -moz-appearance: none;
+                // appearance: none;
+                position: absolute;
+                right: 0;
             }
         }
     }
@@ -72,15 +81,7 @@
             font-weight: 300;
         }
         input {
-            display: block;
-            width: 360px;
-            height: 45px;
-            border: 1px solid $light-text-color;
-            padding-left: 18px;
-            box-sizing: border-box;
-            margin-bottom: 20px;
-            font-size: 11px;
-            color: $light-text-color;
+            @include inputs;
         }
         input[type="submit"] {
             width: 102px;
