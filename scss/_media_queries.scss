@@ -34,10 +34,24 @@
         &__form {margin-bottom: 64px;}
     }
 }
-@media screen and (max-width: 768px) {
-    // .sale {
-    //     &__item {height: 170px;}
-    // }
+@media screen and (max-width: 960px) {
+    .cart {
+        flex-direction: column;
+        padding: 18px;
+        box-sizing: border-box;
+        &__items {margin: 0 auto;}
+        &__form {
+            margin: 0 auto;
+            display: flex;
+            gap: 15px;
+        }
+    }
+    .breadcrumb {
+        padding: 0 16px;
+    }
+    .sort {
+        margin: 0 16px 0 auto;
+    }
 }
 @media screen and (max-width: 760px) {
     .promo {
@@ -63,7 +77,46 @@
         &__list li {
             max-width: 333px;
         }
-        &__input {width: 92vw;}
+    }
+}
+@media screen and (max-width: 720px) {
+    .cart {
+        padding: 8px;
+        margin-top: 39px;
+        &__item {margin-bottom: 32px;}
+        &__form {
+            flex-direction: column;
+        }
+        &__order {margin-top: 48px;}
+        &__heading {
+            margin-bottom: 25px;
+            a {font-size: 16px;}
+        }
+        &__text {
+            padding: 15px;
+            p,
+            .quantity,
+            .price {
+                font-size: 14px;
+                margin-bottom: 0;
+            }
+            .quantity input {font-size: 14px;}
+        }
+        .close {
+            margin: 17px 17px 0 0;
+            svg {
+                width: 11px;
+                height: 11px;
+            }
+        }
+        &__bottom {
+            .btn {
+                max-width: 165px;
+                height: 33px;
+                font-size: 12px;
+                text-transform: none;
+            }
+        }
     }
 }
 @media screen and (max-width: 375px) {
@@ -71,7 +124,27 @@
     .footer {padding: 0 16px;}
     .header {
         &__icons:not(:first-child) {display: none;}
-        &__icons {margin-right: 0;}
+        &__icons:first-child {margin-right: 0;}
+    }
+    .breadcrumb {
+        flex-direction: column;
+        justify-content: center;
+        gap: 32px;
+    }
+    .filtration {
+        &__summary {
+            padding: 8px;
+            p {display: none;}
+            svg {
+                width: 36px;
+                height: 23px;
+                margin-left: 0;
+            }
+        }
+    }
+    .sort {
+        gap: 15px;
+        padding: 12px 0;
     }
     .promo {
         &__text {max-width: 263px;}
@@ -86,6 +159,17 @@
     .sale {
         margin-top: 64px;
         &__item {max-width: 343px;}
+    }
+    .product__slider {
+        &-next,
+        &-prev {top: 18%;}
+        &-img {width: 100%;}
+        .product__detail {
+            hr {
+                margin: 32px auto;
+                max-width: 175px;
+            }
+        }
     }
     .subscribe {
         &__form {
