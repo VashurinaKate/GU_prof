@@ -88,6 +88,7 @@ hr {
           align-items: center;
   height: 75px;
   background: #222222;
+  position: relative;
 }
 .header__search {
   margin-left: 41px;
@@ -97,6 +98,49 @@ hr {
 }
 .header .burger {
   cursor: pointer;
+}
+.header__right details {
+  display: inline-block;
+}
+.header__right details summary {
+  margin-right: 32px;
+}
+.header__right details ::-webkit-details-marker {
+  display: none;
+}
+.header__right details .dropdown {
+  position: absolute;
+  margin-top: 21px;
+  right: 0;
+  max-width: 232px;
+  background: white;
+  padding: 32px;
+  -webkit-box-shadow: 6px 4px 35px 0px rgba(0, 0, 0, 0.21);
+          box-shadow: 6px 4px 35px 0px rgba(0, 0, 0, 0.21);
+  z-index: 10;
+}
+.header__right details .dropdown svg {
+  position: absolute;
+  right: 16px;
+  top: 16px;
+  width: 12px;
+}
+.header__right details .dropdown__heading {
+  font-size: 14px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+.header__right details .dropdown__subheading {
+  font-size: 14px;
+  font-weight: 400;
+  margin-top: 24px;
+  text-transform: uppercase;
+  color: #F16D7F;
+}
+.header__right details .dropdown__list li {
+  list-style-type: none;
+  margin: 11px 0 11px 20px;
+  color: #6F6E6E;
 }
 .header .cart-icon {
   position: relative;
